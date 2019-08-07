@@ -32,8 +32,9 @@ $("document").ready(function() {
       var size = $("#Size").val();
       var crust = $("#Crust").val();
       var qte = $("#quantities").val();
+      var topping=$("#Topping").val();
       var toppings = [];
-      $("input[type=checkbox]:checked").each(function() {
+      $(".form-check-input").each(function() {
         toppings.push($(this).val());
         console.log(toppings);
 

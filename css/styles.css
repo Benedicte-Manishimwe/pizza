@@ -2,14 +2,18 @@ body{
 background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1Gt-W8hxva8o__2iWQQLgRsQefmEA0Nn9_YpcngXv4kyrHz_8TA");
 background-attachment: fixed;
 background-size: cover }
-#header{
+
+   
+.card{
                     font-weight: bolder;
                     color: blue;
-                    padding:100px;
-                    margin-bottom: 20px;
                     font-style:italic;
+                    background-color:#ffffff;
+                    opacity: 0.8;
+                    
                 
                 }
+
 form{
                     background-color: #bbbbbb;
                     font-size: 20px;
