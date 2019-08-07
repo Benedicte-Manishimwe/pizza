@@ -4,15 +4,20 @@ background-attachment: fixed;
 background-size: cover }
 
    
-.card{
+.card-title{
                     font-weight: bolder;
                     color: blue;
                     font-style:italic;
-                    background-color:#ffffff;
-                    opacity: 0.8;
+                    /* background-color:#ffffff;
+                    opacity: 0.8; */
                     
                 
                 }
+#home,#invoice{
+     background-color:#ffffff;
+                     opacity: 0.8; 
+
+}
 
 form{
                     background-color: #bbbbbb;
@@ -20,19 +25,7 @@ form{
                     border: 1px solid salmon;
                     width:100%;
                 }
-.group-form{
-                    display: flex;
-                    flex-direction: column;
-                }
-#Size,#Crust,#Topping {
-                width: 30%;
-                float: left;    
-                }
-#Delivery,#Quantities{
-                     width: 50%;
-                    float: left;
-                }
-                
+
 #choices{
                     margin:20px;
                 }
@@ -40,6 +33,8 @@ form{
                     display:none;
                     width:30%;
                 };
-                /* #choice{
-                    display: none; */
-                /* } */
+.infos{
+    color:blue;
+    font-size:20px;
+}
+             
