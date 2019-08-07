@@ -22,13 +22,14 @@ $("#order").submit(function(event){
         toppings.push($(this).val());
     });
     console.log(toppings);
-    // var newOrder=new order(size,crust,topping,qte);
-    // console.log(newOrder);
+    var newOrder=new order(size,crust,topping,qte);
+    console.log(newOrder);
+   
+    $("ul#view").append("<li>"+newOrder()+"</li>");
     var total=parseInt(size)+parseInt(crust)+parseInt(toppings);
-     console.log(total);
-    $("ul#view").append("<li>"+total.placeOrder()+"</li>");
+    console.log(total);
 
 
 });
 });
-})
+});
