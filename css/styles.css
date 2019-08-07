@@ -1,3 +1,41 @@
-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-TaiL4B61G6brPVyvbUnuL__0hNrZo__jhB995aT-e4W64v4P"
-                    alt="pizza" width="50%">
-                <div class="card-img-overlay">
+body{
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1Gt-W8hxva8o__2iWQQLgRsQefmEA0Nn9_YpcngXv4kyrHz_8TA");
+background-attachment: fixed;
+background-size: cover }
+#header{
+                    font-weight: bolder;
+                    color: blue;
+                    padding:100px;
+                    margin-bottom: 20px;
+                    font-style:italic;
+                
+                }
+form{
+                    background-color: #bbbbbb;
+                    font-size: 20px;
+                    border: 1px solid salmon;
+                    width:100%;
+                }
+.group-form{
+                    display: flex;
+                    flex-direction: column;
+                }
+#Size,#Crust,#Topping {
+                width: 30%;
+                float: left;    
+                }
+#Delivery,#Quantities{
+                     width: 50%;
+                    float: left;
+                }
+                
+#choices{
+                    margin:20px;
+                }
+.ch1,.ch2,.ch3,.ch4,.ch5,.ch6,.ch7{
+                    display:none;
+                    width:30%;
+                };
+                /* #choice{
+                    display: none; */
+                /* } */

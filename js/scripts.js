@@ -18,12 +18,12 @@ $("document").ready(function() {
       this.Topping
     );
   };
-  function person(names, address, phone) {
-    this.fullname = names;
-    this.location = address;
-    this.tel = phone;
-  }
-  client = new person(names, address, phone);
+  // function person(names, address, phone) {
+  //   this.fullname = names;
+  //   this.location = address;
+  //   this.tel = phone;
+  // }
+  // client = new person(names, address, phone);
   //User Interface logic
 
   $("#send").click(function() {
@@ -35,13 +35,43 @@ $("document").ready(function() {
       var toppings = [];
       $("input[type=checkbox]:checked").each(function() {
         toppings.push($(this).val());
+        console.log(toppings);
 
         var newOrder = new order(size, crust, toppings, qte);
         console.log(newOrder);
         $("ul#view").append("<li>" + newOrder() + "</li>");
         if (delivery === true) {
           alert("the delivery cost is 2000");
-        }
+        };
+        if ((crust === crispy) && (topping === ham)) {
+          $("#hamCrispy").fadeIn();
+
+      };
+       if ((crust === crispy) && (topping === beef)) {
+          $("#beefCrispy").fadeIn();
+      };
+      if ((crust === crispy) && (topping === vegetables)) {
+          $("#hamStuffed").fadeIn();
+      };
+      if ((crust === stuffed) && (topping === ham)) {
+          $("#beefStuffed").fadeIn();
+
+      };
+      if ((crust === stuffed) && (topping === beef)) {
+          $("#vegCrispy").fadeIn();
+      };
+      if ((crust === stuffed) && (topping === veg)) {
+          $("#vegStuffed").fadeIn();
+      };
+      if ((crust === gluten - free) && (topping === ham)) {
+          $("#beefGluten").fadeIn();
+      };
+      if ((crust === gluten - free) && (topping === beef)) {
+          $("#beefGluten").fadeIn();
+      };
+      if ((crust === gluten - free) && (topping === veg)) {
+          $("#vegStuffed").fadeIn();
+      };
     });
         $("#comfirm").submit(function() {
           var total =
