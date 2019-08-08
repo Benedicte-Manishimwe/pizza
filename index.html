@@ -62,10 +62,10 @@
                     </div>
 
                     <div class="form-check col-md-6">
-                        <label>Topping</label>
+                        <label>Topping:</label>      &nbsp;
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="toppingSelector" value="cheese" checked>
-                            <label class="form-check-label">Cheese</label>
+                            <input class="form-check-input" type="checkbox" id="toppingSelector" value="sausage">
+                            <label class="form-check-label">Sausage</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="top" value="ham">
@@ -76,8 +76,12 @@
                             <label class="form-check-label" for="inlineRadio2">Beef</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="top" value="Vegetables">
+                            <input class="form-check-input" type="checkbox" id="top" value="Mushrooms">
                             <label class="form-check-label" for="inlineRadio3">Mushrooms</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="top" value="Halal">
+                            <label class="form-check-label" for="inlineRadio3">Halal</label>
                         </div>
                     </div>
                    
@@ -87,15 +91,15 @@
 
                         <div class="form-group col-md-10" id="fullname">
                             <label>Full names</label>
-                            <input type="text" id="names" placeholder="your names...">
+                            <input type="text" id="names" placeholder="your names..." required>
                         </div>
-                        <div class="form-group col-md-10" id="location">
+                        <div class="form-group col-md-10" id="location" >
                             <label>Address</label>
-                            <input type="text" id="address" placeholder="disrict,avenue,plot number,...">
+                            <input type="text" id="address" placeholder="disrict,avenue,plot number,..."required>
                         </div>
                         <div class="form-group col-md-10" id="tel">
                             <label>Contact</label>
-                            <input type="tel" id="tel" placeholder="+250...">
+                            <input type="tel" id="tel" placeholder="+250..."required>
                         </div>
 
                     </div>
