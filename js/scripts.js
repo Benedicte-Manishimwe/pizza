@@ -1,23 +1,18 @@
-$("document").ready(function() {
+$(document).ready(function () {
   //business logic
-  function order(size, crust, toppings, qte) {
-    this.Size = size;
-    this.Crust = crust;
-    this.Topping = toppings;
-    this.Quantities = qte;
+  function Firstorder(size, crust, toppings, qte) {
+    this.choiceSize = size;
+    this.choiceCrust = crust;
+    this.choiceTopping = toppings;
+    this.choiceQuantities = qte;
+    
   }
-  order.prototype.placeOrder = function() {
-    return (
-      "you are ordering " +
-      this.Quantities +
-      " pizza have the size:" +
-      this.Size +
-      ",with crust: " +
-      this.Crust +
-      " , and the topping : " +
-      this.Topping
-    );
+  Firstorder.prototype.placeOrder = function () {
+    return ("you are ordering " + this.choiceQuantities + " pizza have the size:" + this.choiceSize + ",with crust: " + this.choiceCrust + 
+    " ,and the topping : " + this.choiceTopping );
   };
+  this.choiceDelivery = delivery;
+
   // function person(names, address, phone) {
   //   this.fullname = names;
   //   this.location = address;
@@ -26,67 +21,74 @@ $("document").ready(function() {
   // client = new person(names, address, phone);
   //User Interface logic
 
-  $("#send").click(function() {
-    $("#order").submit(function(event) {
+  $("#send1").click(function () {
+    $("#order").submit(function (event) {
       event.preventDefault();
-      var size = $("#Size").val();
-      var crust = $("#Crust").val();
-      var qte = $("#quantities").val();
-      var topping=$("#Topping").val();
+      var size = $("#sizeSelector").val();
+      var sizePrice;
+      if(size==="Large"){
+        return sizePrice=4000;
+      }
+      else if(size==="Medium"){
+        sizePrice=3000;
+      }
+      else if(size==="Small"){
+        sizePrice=2000;
+      }
+      var crust = $("#crustSelector").val();
+      var crustPrice;
+      if ((crust==="Crispy")||(crust==="Stuffed")){
+        crustPrice=500;
+      }
+      else{
+        crustPrice=800;
+      }
+      var qte = $("#quantitiesSelector").val();
+      //  console.log(size);
       var toppings = [];
-      $(".form-check-input").each(function() {
+      $("input[type=checkbox]:checked").each(function () {
         toppings.push($(this).val());
-        console.log(toppings);
-
-        var newOrder = new order(size, crust, toppings, qte);
-        console.log(newOrder);
-        $("ul#view").append("<li>" + newOrder() + "</li>");
-        if (delivery === true) {
-          alert("the delivery cost is 2000");
-        };
-        if ((crust === crispy) && (topping === ham)) {
-          $("#hamCrispy").fadeIn();
-
-      };
-       if ((crust === crispy) && (topping === beef)) {
-          $("#beefCrispy").fadeIn();
-      };
-      if ((crust === crispy) && (topping === vegetables)) {
-          $("#hamStuffed").fadeIn();
-      };
-      if ((crust === stuffed) && (topping === ham)) {
-          $("#beefStuffed").fadeIn();
-
-      };
-      if ((crust === stuffed) && (topping === beef)) {
-          $("#vegCrispy").fadeIn();
-      };
-      if ((crust === stuffed) && (topping === veg)) {
-          $("#vegStuffed").fadeIn();
-      };
-      if ((crust === gluten - free) && (topping === ham)) {
-          $("#beefGluten").fadeIn();
-      };
-      if ((crust === gluten - free) && (topping === beef)) {
-          $("#beefGluten").fadeIn();
-      };
-      if ((crust === gluten - free) && (topping === veg)) {
-          $("#vegStuffed").fadeIn();
-      };
-    });
-        $("#comfirm").submit(function() {
-          var total =
-            parseInt(size) + parseInt(crust) + parseInt(toppings) + delivery;
-          console.log(total);
-          $("#price").append(total);
-          var names = $("#fullname").val();
-          var address = $("#location").val();
-          var phone = $("#tel").val();
-          var client = new person(names, address, phone);
-          $("#motivation").append(client, "thank youm to shop with us!!");
-        });
       });
-    
+      // console.log(toppings);
+      
+      for(var topp=0;topp<toppings.length;topp++){
+        var addToppings=0;
+        if (toppings[topp]==="Beef"){
+          addToppings+=1000;
+        }
+        else if (toppings[topp]==="Ham"){
+          addToppings+=1500;
+        }
+        else if ((toppings[top]==="Vegetables")){
+          addToppings+=2000;
+        }
+        else{
+          addToppings+=500;
+        }
+      }
+      // var total=(addToppings+sizePrice+crustPrice)*qte;
+      var anotherOrder = new Firstorder(size, crust, toppings, qte);
+      console.log(anotherOrder);
+
+      $("ol#view").append("<li>" + anotherOrder.placeOrder() + "</li>");
+
+      var delivery = $("#deliverySelector").val();
+      if (delivery === true) {
+        alert("the delivery cost is Rwf 2000");
+      };
+
+      $("#comfirm").submit(function () {
+        var total = parseInt(size) + parseInt(crust) + parseInt(toppings[i]) + delivery;
+        console.log(total);
+        $("#price").append(total);
+        var names = $("#fullname").val();
+        var address = $("#location").val();
+        var phone = $("#tel").val();
+        var client = new person(names, address, phone);
+        $("#motivation").append(client, "thank youm to shop with us!!");
+      });
+    });
+
   });
 });
 

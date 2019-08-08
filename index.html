@@ -14,110 +14,113 @@
 
 <body>
     <div class="container text-center">
-        
+
 
 
         <div class=" card-title text-center">
             <h2>MONA PIZZERIA</h2>
-            <P>The best pizza is brougth near to you!!!</P>
+            <P>The best westen food at affrodable price!!!</P>
         </div>
         <div class="jumbtron ">
             <div class="dvpt">
                 <div id="home">
 
                     <h3>HOME</h3>
-                    <p> MONA PIZZERIA islocated at kimironko , near modern market in haerth of CMHS former KIE, <br>it
-                        is
-                        iniative of female student how like to show the talent related in calinary.</p>
-                    <p>the house has a chef specialize in italian food, the pizza is our favaroite.</p>
-
+                    <p> MONA PIZZERIA is located at kimironko , near modern market in haerth of CMHS former KIE, <br>it
+                        is iniative of female student how like to show the talent related in calinary.</p>
+                    <p>the house has a chef which has a specialityin italian food, the pizza is our favaroite.</p>
                 </div>
 
                 <form id="order">
                     <p>The client have to choose the pizza according its size, crust and one or more topping.<br>he/she
                         precise the mode of delivery.
-                        <P>
-                            <h5>ORDER</h5>
-                            <div class="row">
+                    </P>
+                    <h5>ORDER</h5>
+                    <div class="row">
 
-                                <div class="form-group col-md-10" id="Size">
-                                    <label>Size</label>
-                                    <select>
-                                        <option type="radio" id="size1" value="3000">Large</option>
-                                        <option type="radio" id="size2" value="1500">Medium</option>
-                                        <option type="radio" is="size3" value="1000">Small</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-10" id="Crust">
-                                    <label>Crust</label>
-                                    <select>
-                                        <option type="radio" id="crust" value="500">Crispy</option>
-                                        <option type="radio" id="crust" value="500">Stuffed</option>
-                                        <option type="radio" id="crust" value="500">Gluteen-free</option>
-                                    </select>
-                                </div>
-                                <div class="form-check col-md-10" id="Topping">
-                                    <label>Topping</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" 
-                                            id="top1" value="cheese" checked>
-                                        <label class="form-check-label" >Cheese</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" 
-                                            id="top1" value="ham">
-                                        <label class="form-check-label" for="inlineRadio1">Ham</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" 
-                                            id="top2" value="beef">
-                                        <label class="form-check-label" for="inlineRadio2">Beef</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox"
-                                            id="top3" value="Vegetables">
-                                        <label class="form-check-label" for="inlineRadio3">Vegetables</label>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-10" id="">
-                                    <label>Quantity</label>
-                                    <input type="number" min="1" required id="Quantities">
-                                </div>
-                                <div class="form-group col-md-10" id="Delivery">
-                                    <label>Mode of delivery</label>
-                                    <select>
-                                        <option type="radio" id="delivery">PICK-UP</option>
-                                        <option type="radio" id="delivery">DELIVERY</option>
-                                    </select>
-                                </div>
-
+                        <div class="form-group col-md-10">
+                            <label>Size</label>
+                            <select id="sizeSelector">
+                                <option type="radio" id="size" value="large">Large</option>
+                                <option type="radio" id="size" value="medium">Medium</option>
+                                <option type="radio" is="size" value="Small">Small</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-10">
+                            <label>Crust</label>
+                            <select id="crustSelector">
+                                <option type="radio" id="crust" value="Crispy">Crispy</option>
+                                <option type="radio" id="crust" value="Stuffed">Stuffed</option>
+                                <option type="radio" id="crust" value="Gluteen-free">Gluteen-free</option>
+                            </select>
+                        </div>
+                        <div class="form-check col-md-10">
+                            <label>Topping</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="toppingSelector" value="cheese"
+                                    checked>
+                                <label class="form-check-label">Cheese</label>
                             </div>
-                            <h5>CLIENT</h5>
-                            <div class="form-row">
-
-                                <div class="form-group col-md-10" id="fullname">
-                                    <label>Full names</label>
-                                    <input type="text" id="names" placeholder="your names...">
-                                </div>
-                                <div class="form-group col-md-10" id="location">
-                                    <label>Address</label>
-                                    <input type="text" id="address" placeholder="disrict,avenue,plot number,...">
-                                </div>
-                                <div class="form-group col-md-10" id="tel">
-                                    <label>Contact</label>
-                                    <input type="tel" id="names" placeholder="+250...">
-                                </div>
-
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="top" value="ham">
+                                <label class="form-check-label" for="inlineRadio1">Ham</label>
                             </div>
-                            <button type="submit" id="send">ORDERING</button>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="top" value="beef">
+                                <label class="form-check-label" for="inlineRadio2">Beef</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="top" value="Vegetables">
+                                <label class="form-check-label" for="inlineRadio3">Vegetables</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-10" id="">
+                            <label>Quantity</label>
+                            <input type="number" min="1" required id="quantitiesSelector">
+                        </div>
+                        <div class="form-group col-md-10" >
+                            <label>Mode of delivery</label>
+                            <select id="deliverySelector">
+                                <option type="radio" id="delivery" value="false">PICK-UP</option>
+                                <option type="radio" id="delivery" value="true">DELIVERY</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <h5>CLIENT</h5>
+                    <div class="form-row">
+
+                        <div class="form-group col-md-10" id="fullname">
+                            <label>Full names</label>
+                            <input type="text" id="names" placeholder="your names...">
+                        </div>
+                        <div class="form-group col-md-10" id="location">
+                            <label>Address</label>
+                            <input type="text" id="address" placeholder="disrict,avenue,plot number,...">
+                        </div>
+                        <div class="form-group col-md-10" id="tel">
+                            <label>Contact</label>
+                            <input type="tel" id="names" placeholder="+250...">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <button type="submit" id="send1">ORDERING</button>
+                        </div>
+                    
+                       <div class="col-md-6">
+                        <button type="submit" id="clear">NEW ORDER</button>
+                       </div>
+                    </div>
                 </form>
                 <div id="invoice">
-                    <p>Your order is:<ul id="view"></ul>
+                    <p>Your order is:<ol id="view"></ol>
                         <div id="sb">
-                                <button type="submit" id="comfirm">OK</button>
-                                <p>Total price:<span id="price"></span></p>
-                                <p id="motivation"></p>
-                            </div>
+                            <button type="submit" id="comfirm">OK</button>
+                            <p>Total price:<span id="price"></span></p>
+                            <p id="motivation"></p>
+                        </div>
                         <div class="ch1">
                             <img id="hamCrispy" src="https://images.media-allrecipes.com/userphotos/560x315/1687323.jpg"
                                 width="20%">
@@ -126,69 +129,65 @@
                             </div>
                         </div>
                         <div class="ch2">
-                            <img id="hamStuffed"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ULDyqV_HqjEufblMhuOa80LDE862Ge1XrtgM5bV_u5vt0iAx">
+                            <img id="hamStuffed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ULDyqV_HqjEufblMhuOa80LDE862Ge1XrtgM5bV_u5vt0iAx">
                             <div class="pres2">
                                 <h4>HAM STUFFED PIZZA</h4>
                             </div>
                         </div>
                         <div class="ch3">
-                            <img id="beefStuffed"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4aPDupRysoNMcQA_TNyGuGbCNj7VHGbx7KChQBLIgSdbWkaaAuw">
+                            <img id="beefStuffed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4aPDupRysoNMcQA_TNyGuGbCNj7VHGbx7KChQBLIgSdbWkaaAuw">
                             <div class="pres3">
                                 <h4>BEEF STUFFED PIZZA</h4>
                             </div>
                         </div>
                         <div class="ch4">
                             <img id="beefCrispy" src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80>
-                                                 <div class=" pres4">
+                                                 <div class="
+                                pres4">
                             <h4>BEEF CRISPY PIZZA</h4>
                         </div>
                 </div>
                 <div class="ch5">
-                    <img id="Gluteen-free"
-                        src="https://lh3.googleusercontent.com/N0LzJfoVkSF-ByU1AcyiE8vTqhvdy1ISmsAq-5DK4LCLtAZx3mPhXqB8jE1vd-jlwYmAzkA=s123">
+                    <img id="Gluteen-free" src="https://lh3.googleusercontent.com/N0LzJfoVkSF-ByU1AcyiE8vTqhvdy1ISmsAq-5DK4LCLtAZx3mPhXqB8jE1vd-jlwYmAzkA=s123">
                     <div class="pres5">
                         <h4> HAM GLUTEEN-FREE PIZZA</h4>
                     </div>
                 </div>
                 <div class="ch6">
-                    <img id="vegCrispy"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJX7OkvRES89TjHavGmVBmpzeSWrKbBicbDjU0q2WtTzHQrl4Zug">
+                    <img id="vegCrispy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJX7OkvRES89TjHavGmVBmpzeSWrKbBicbDjU0q2WtTzHQrl4Zug">
                     <div class="pres6">
                         <h4>VEGETABLES CRISPY PIZZA</h4>
                     </div>
                 </div>
                 <div class="ch7">
-                    <img id="vegStuffed"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM1HSkgoJdqokuDlVfP_DDrKgUcSdHYSmqeVajtJnCHIWR6kxC">
+                    <img id="vegStuffed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM1HSkgoJdqokuDlVfP_DDrKgUcSdHYSmqeVajtJnCHIWR6kxC">
                     <div class="pres7">
                         <h4>VEGETABLES STUFFED PIZZA</h4>
                     </div>
                 </div>
-                
+
 
 
             </div>
 
 
         </div>
-        
+
 
 
         <div class="infos">
-                <div id="contact">
-                       <p>For more information, don't hesitate to contact us on :<br>
-                        +250-788291717 or monapizzeria@gmail.com.
-                    </p> 
-                    </div>
+            <div id="contact">
+                <p>For more information, don't hesitate to contact us on :<br>
+                    +250-788291717 or monapizzeria@gmail.com.
+                </p>
+            </div>
             <p>Copyrigths reserved @MonaPizzeria.</p>
         </div>
 
 
     </div>
 
-    </div>
+
 </body>
 
 </html>
