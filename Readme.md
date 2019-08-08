@@ -5,7 +5,7 @@
 * The user could review his order and its relative costs before to submit and the user is given the possibilities to revert his order.while filling identification , the ownercould localate his client for easy delivery.
 
 ## Setup/Installation Requirements
-* live site hppts: https://benedicte-manishimwe.github.io/pizza-project/
+* live site hppts: https://benedicte-manishimwe.github.io/pizza
 * cd pizza-project.
 * code .
 * atom .(for mac).

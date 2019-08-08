@@ -55,14 +55,14 @@
                             </select>
                         </div>
                         <div class="form-group col-md-4" id="qt">
-                                <label>Quantity</label>
-                                <input type="number" min="1" required id="quantitiesSelector">
-                            </div>
+                            <label>Quantity</label>
+                            <input type="number" min="1" required id="quantitiesSelector">
+                        </div>
 
                     </div>
 
                     <div class="form-check col-md-6">
-                        <label>Topping:</label>      &nbsp;
+                        <label>Topping:</label> &nbsp;
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="toppingSelector" value="sausage">
                             <label class="form-check-label">Sausage</label>
@@ -84,7 +84,7 @@
                             <label class="form-check-label" for="inlineRadio3">Halal</label>
                         </div>
                     </div>
-                   
+
 
                     <h5>CLIENT</h5>
                     <div class="form-row">
@@ -93,13 +93,10 @@
                             <label>Full names</label>
                             <input type="text" id="names" placeholder="your names..." required>
                         </div>
-                        <div class="form-group col-md-10" id="location" >
-                            <label>Address</label>
-                            <input type="text" id="address" placeholder="disrict,avenue,plot number,..."required>
-                        </div>
+
                         <div class="form-group col-md-10" id="tel">
                             <label>Contact</label>
-                            <input type="tel" id="tel" placeholder="+250..."required>
+                            <input type="tel" id="tel" placeholder="+250..." required>
                         </div>
 
                     </div>
@@ -111,20 +108,22 @@
                         <div class="col-md-6">
                             <input type="button" id="clear" value="NEW ORDER" placeholder="NEW ORDER">
                         </div>
+
+                        <div class="form-group col-md-8"" id=" deli">
+                            <label>Please, precise mode of delivery :</label>
+
+                            <input type="radio" id="delivery"><label>DELIVERY</label>&nbsp;&nbsp;&nbsp;
+
+                            <input type="radio" id="pick"><label>PICK-UP</label>
+                        </div>
                     </div>
                 </form>
                 <div id="invoice">
                     <p>Your order is:<ol id="view"></ol>
                     </p>
-                    <div class="form-group col-md-6"" id=" deli">
-                            <label>Please, precise mode of delivery :</label>
-                        
-                            <input type="radio" id="delivery"><label>DELIVERY</label>&nbsp;&nbsp;&nbsp;
-                        
-                            <input type="radio" id="pick"><label>PICK-UP</label>
-                             </div>
+
                     <div id="sb">
-                        <p>Total price:<span ><b id="price"></b></span></p>
+                        <p>Total price:<span><b id="price"></b></span></p>
                         <p id="motivation"></p>
                     </div>
                 </div>
@@ -137,7 +136,7 @@
                     +250-788291717 or monapizzeria@gmail.com.
                 </p>
             </div>
-            <p  class="foot">Copyrigths reserved @MonaPizzeria2019.</p>
+            <p class="foot">Copyrigths reserved @MonaPizzeria2019.</p>
         </div>
     </div>
 </body>

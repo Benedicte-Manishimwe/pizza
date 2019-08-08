@@ -1,48 +1,44 @@
-body{
-background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1Gt-W8hxva8o__2iWQQLgRsQefmEA0Nn9_YpcngXv4kyrHz_8TA");
-background-attachment: fixed;
-background-size: cover }
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1Gt-W8hxva8o__2iWQQLgRsQefmEA0Nn9_YpcngXv4kyrHz_8TA");
+  background-attachment: fixed;
+  background-size: cover;
+}
 
-   
-.card-title{
-                    font-weight: bolder;
-                    color: blue;
-                    font-style:italic;
-                    /* background-color:#ffffff;
+.card-title {
+  font-weight: bolder;
+  color: blue;
+  font-style: italic;
+  /* background-color:#ffffff;
                     opacity: 0.8; */
-                    
-                
-                }
-#home,#invoice{
-     background-color:#ffffff;
-                     opacity: 0.8; 
-
+}
+#home,
+#invoice {
+  background-color: #ffffff;
+  opacity: 0.8;
 }
 
-form{
-                    background-color: #bbbbbb;
-                    font-size: 20px;
-                    border: 1px solid salmon;
-                    width:100%;
-                }
-
-#choices{
-                    margin:20px;
-                }
-
-.infos{
-    color:blue;
-    font-size:20px;
-}
-.foot{
-    text-decoration: underline;
-}
-label{
-    font-weight: bolder;
-}
-b{
-    font-weight: bolder;
-    color:red;
+form {
+  background-color: #bbbbbb;
+  font-size: 20px;
+  border: 1px solid salmon;
+  width: 100%;
 }
 
-             
+#choices {
+  margin: 20px;
+}
+
+.infos {
+  color: blue;
+  font-size: 20px;
+}
+.foot {
+  text-decoration: underline;
+}
+label {
+  font-weight: bolder;
+}
+b {
+  font-weight: bolder;
+  color: red;
+}
