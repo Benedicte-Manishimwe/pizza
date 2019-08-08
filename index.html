@@ -38,7 +38,7 @@
                     <h5>ORDER</h5>
                     <div class="row">
 
-                        <div class="form-group col-md-10">
+                        <div class="form-group col-md-4">
                             <label>Size</label>
                             <select id="sizeSelector">
                                 <option type="radio" id="size" value="large">Large</option>
@@ -46,7 +46,7 @@
                                 <option type="radio" is="size" value="Small">Small</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-10">
+                        <div class="form-group col-md-4">
                             <label>Crust</label>
                             <select id="crustSelector">
                                 <option type="radio" id="crust" value="Crispy">Crispy</option>
@@ -54,39 +54,45 @@
                                 <option type="radio" id="crust" value="Gluteen-free">Gluteen-free</option>
                             </select>
                         </div>
-                        <div class="form-check col-md-10">
-                            <label>Topping</label>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="toppingSelector" value="cheese"
-                                    checked>
-                                <label class="form-check-label">Cheese</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="top" value="ham">
-                                <label class="form-check-label" for="inlineRadio1">Ham</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="top" value="beef">
-                                <label class="form-check-label" for="inlineRadio2">Beef</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="top" value="Vegetables">
-                                <label class="form-check-label" for="inlineRadio3">Vegetables</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-10" id="">
+                        <div class="form-group col-md-4" id="qt">
                             <label>Quantity</label>
                             <input type="number" min="1" required id="quantitiesSelector">
                         </div>
-                        <div class="form-group col-md-10" >
-                            <label>Mode of delivery</label>
-                            <select id="deliverySelector">
-                                <option type="radio" id="delivery" value="false">PICK-UP</option>
-                                <option type="radio" id="delivery" value="true">DELIVERY</option>
-                            </select>
-                        </div>
 
                     </div>
+
+
+
+                    <div class="form-check col-md-6">
+                        <label>Topping</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="toppingSelector" value="cheese" checked>
+                            <label class="form-check-label">Cheese</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="top" value="ham">
+                            <label class="form-check-label" for="inlineRadio1">Ham</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="top" value="beef">
+                            <label class="form-check-label" for="inlineRadio2">Beef</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="top" value="Vegetables">
+                            <label class="form-check-label" for="inlineRadio3">Vegetables</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-4" id="deli">
+                        <label>Mode of delivery</label>
+                        <select id="deliverySelector">
+                            <option type="radio" id="delivery" value="false">PICK-UP</option>
+                            <option type="radio" id="delivery" value="true">DELIVERY</option>
+                        </select>
+                    </div>
+
+
+
                     <h5>CLIENT</h5>
                     <div class="form-row">
 
@@ -106,12 +112,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                                <button type="submit" id="send1">ORDERING</button>
+                            <button type="submit" id="send1">ORDERING</button>
                         </div>
-                    
-                       <div class="col-md-6">
-                        <button type="submit" id="clear">NEW ORDER</button>
-                       </div>
+
+                        <div class="col-md-6">
+                            <input type="button" id="clear" value="reset-form">NEW ORDER</button>
+                        </div>
                     </div>
                 </form>
                 <div id="invoice">
