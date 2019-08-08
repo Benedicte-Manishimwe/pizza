@@ -28,17 +28,17 @@ $(document).ready(function() {
   };
   this.choiceDelivery = delivery;
 
-  // function person(names, address, phone) {
-  //   this.fullname = names;
-  //   this.location = address;
-  //   this.tel = phone;
-  // }
+  function person(names,phone) {
+    this.fullname = names;
+    this.tel = phone;
+  }
   // client = new person(names, address, phone);
   //User Interface logic
 
   $("#send1").click(function() {
     $("#order").submit(function(event) {
       event.preventDefault();
+     
       var size = $("#sizeSelector").val();
 
       var crust = $("#crustSelector").val();
@@ -49,16 +49,15 @@ $(document).ready(function() {
       $("input[type=checkbox]:checked").each(function() {
         toppings.push($(this).val());
       });
-
+     
       var firstOrder = new order(size, crust, toppings, qte);
       console.log(firstOrder);
 
       var total = (toppings + size + crust) * qte;
       console.log(total);
 
-      $("ol#view").append(
-        "<li>" + firstOrder.placeOrder() + " at " + total + "</li>"
-      );
+      $("ol#view").append("<li>" + firstOrder.placeOrder() + " for  " + total +" Rwf  </li>");
+     
       //to reset the form
       $("#clear").click(function() {
         $("#order")[0].reset();
