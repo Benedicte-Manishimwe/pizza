@@ -40,16 +40,17 @@ $(document).ready(function () {
 
       $("ol#view").append("<li>" + anotherOrder.placeOrder() + "</li>");
     });
+    //to reset the form 
     $("#clear").click(function(){
-      $("#order")[0].reset();
+      $("#order")[0].reset(function (event){
+        event.preventDefault;
+      });
+     
+
     });
-    // function myFunction() {
-    //   document.getElementById("myForm").reset();
-    // }
+    
     $("#confirm").submit(function () {
-      
-      $("#deli").show(function () {
-        alert("choose mode of delivery");
+  
         var delivery = $("#deliverySelector").val();
         if (delivery === true) {
           alert("the delivery cost is Rwf 2000");
@@ -102,23 +103,8 @@ $(document).ready(function () {
 
 
       });
-      // $("#comfirm").submit(function () {
-      //   var total = parseInt(size) + parseInt(crust) + parseInt(toppings[i]) + delivery;
-      //   console.log(total);
-      //   $("#price").append(total);
-      //   var names = $("#fullname").val();
-      //   var address = $("#location").val();
-      //   var phone = $("#tel").val();
-      //   var client = new person(names, address, phone);
-      //   $("#motivation").append(client, "thank youm to shop with us!!");
-      // });
-    });
+      
 
 
   });
 });
-// using js function to reset the form
-// function clear(){
-//   document.getElementById("order").reset();
-// }
-

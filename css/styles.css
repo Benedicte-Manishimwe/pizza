@@ -29,13 +29,16 @@ form{
 #choices{
                     margin:20px;
                 }
-.ch1,.ch2,.ch3,.ch4,.ch5,.ch6,.ch7{
-                    display:none;
-                    width:30%;
-                };
+
 .infos{
     color:blue;
     font-size:20px;
+}
+.foot{
+    text-decoration: underline;
+}
+label{
+    font-weight: bolder;
 }
 
              
