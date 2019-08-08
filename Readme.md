@@ -1,4 +1,4 @@
-*PIZZA-Online ordering webpage
+##**PIZZA-Online ordering webpage
 * this project is  online ordering webpage of food service especialy Pizza;the user could choice many order and precise the mode of delivery . the total cost is given according the mode of delivery .the buyer is able to locate his client via the location input of the client. 
  ## **By MANISHIMWE BENEDICTE **
 ## Description
