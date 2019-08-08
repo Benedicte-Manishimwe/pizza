@@ -8,12 +8,9 @@ $(document).ready(function () {
 
 
   }
-  function client(name, location, phone) {
+  function client(name, phone) {
     this.choiceNames = name;
-    this.choiceAddress = location;
     this.choiceTel = phone;
-
-
   }
 
   order.prototype.total = (this.choiceCrust + this.choiceSize + this.choiceTopping) * this.choiceQuantities;
@@ -56,21 +53,21 @@ $(document).ready(function () {
       var name = $("#names").val();
       var location = $("#address").val();
       var phone = $("#tel").val();
-      var person = new client(name, location, phone);
+      var person = new client(name, phone);
       $("#delivery").click(function () {
         alert("delivery charges is 2000Rwf");
         var finalTotal = total += 2000;
 
 
 
-        $("#price").show(finalTotal);
+        $("#price").append(finalTotal);
         $("#motivation").append("Dear " + person + " , thank you for shopping with us! Your order will be delivered at " + location);
       });
 
       $("#pick").click(function () {
         var finalTotal = total;
 
-        $("#price").show(finalTotal);
+        $("#price").append(finalTotal);
         $("#motivation").append("Dear " + person + " , thank you for shopping with us!");
 
       });
