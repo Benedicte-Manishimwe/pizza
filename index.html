@@ -55,13 +55,11 @@
                             </select>
                         </div>
                         <div class="form-group col-md-4" id="qt">
-                            <label>Quantity</label>
-                            <input type="number" min="1" required id="quantitiesSelector">
-                        </div>
+                                <label>Quantity</label>
+                                <input type="number" min="1" required id="quantitiesSelector">
+                            </div>
 
                     </div>
-
-
 
                     <div class="form-check col-md-6">
                         <label>Topping</label>
@@ -82,14 +80,7 @@
                             <label class="form-check-label" for="inlineRadio3">Vegetables</label>
                         </div>
                     </div>
-
-                    <div class="form-group col-md-4" id="deli">
-                        <label>Mode of delivery</label>
-                        <select id="deliverySelector">
-                            <option type="radio" id="delivery" value="false">PICK-UP</option>
-                            <option type="radio" id="delivery" value="true">DELIVERY</option>
-                        </select>
-                    </div>
+                   
 
                     <h5>CLIENT</h5>
                     <div class="form-row">
@@ -104,7 +95,7 @@
                         </div>
                         <div class="form-group col-md-10" id="tel">
                             <label>Contact</label>
-                            <input type="tel" id="names" placeholder="+250...">
+                            <input type="tel" id="tel" placeholder="+250...">
                         </div>
 
                     </div>
@@ -121,9 +112,15 @@
                 <div id="invoice">
                     <p>Your order is:<ol id="view"></ol>
                     </p>
+                    <div class="form-group col-md-6"" id=" deli">
+                            <label>Please, precise mode of delivery :</label>
+                        
+                            <input type="radio" id="delivery"><label>DELIVERY</label>&nbsp;&nbsp;&nbsp;
+                        
+                            <input type="radio" id="pick"><label>PICK-UP</label>
+                             </div>
                     <div id="sb">
-                        <button type="submit" id="comfirm">OK</button>
-                        <p>Total price:<span id="price"></span></p>
+                        <p>Total price:<span ><b id="price"></b></span></p>
                         <p id="motivation"></p>
                     </div>
                 </div>
@@ -136,7 +133,7 @@
                     +250-788291717 or monapizzeria@gmail.com.
                 </p>
             </div>
-            <p  class="foot">Copyrigths reserved @MonaPizzeria.</p>
+            <p  class="foot">Copyrigths reserved @MonaPizzeria2019.</p>
         </div>
     </div>
 </body>

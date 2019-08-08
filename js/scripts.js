@@ -1,13 +1,23 @@
 $(document).ready(function () {
   //business logic
-  function Firstorder(size, crust, toppings, qte) {
+  function order(size, crust, toppings, qte) {
     this.choiceSize = size;
     this.choiceCrust = crust;
     this.choiceTopping = toppings;
     this.choiceQuantities = qte;
 
+
   }
-  Firstorder.prototype.placeOrder = function () {
+  function client(name, location, phone) {
+    this.choiceNames = name;
+    this.choiceAddress = location;
+    this.choiceTel = phone;
+
+
+  }
+
+  order.prototype.total = (this.choiceCrust + this.choiceSize + this.choiceTopping) * this.choiceQuantities;
+  order.prototype.placeOrder = function () {
     return ("you are ordering " + this.choiceQuantities + " pizza have the size:" + this.choiceSize + ",with crust: " + this.choiceCrust +
       " ,and the topping : " + this.choiceTopping);
   };
@@ -25,86 +35,58 @@ $(document).ready(function () {
     $("#order").submit(function (event) {
       event.preventDefault();
       var size = $("#sizeSelector").val();
-      
+
       var crust = $("#crustSelector").val();
-      
+
       var qte = $("#quantitiesSelector").val();
       //  console.log(size);
       var toppings = [];
       $("input[type=checkbox]:checked").each(function () {
         toppings.push($(this).val());
       });
-     
-      var anotherOrder = new Firstorder(size, crust, toppings, qte);
-      console.log(anotherOrder);
 
-      $("ol#view").append("<li>" + anotherOrder.placeOrder() + "</li>");
-    });
-    //to reset the form 
-    $("#clear").click(function(){
-      $("#order")[0].reset(function (event){
-        event.preventDefault;
+      var firstOrder = new order(size, crust, toppings, qte);
+      console.log(firstOrder);
+
+      var total = (toppings + size + crust) * qte;
+      console.log(total);
+
+      $("ol#view").append("<li>" + firstOrder.placeOrder() + " at " + total + "</li>");
+
+      var name = $("#names").val();
+      var location = $("#address").val();
+      var phone = $("#tel").val();
+      var person = new client(name, location, phone);
+      $("#delivery").click(function () {
+        alert("delivery charges is 2000Rwf");
+        var finalTotal = total += 2000;
+
+
+
+        $("#price").show(finalTotal);
+        $("#motivation").append("Dear " + person + " , thank you for shopping with us! Your order will be delivered at " + location);
       });
-     
 
-    });
-    
-    $("#confirm").submit(function () {
-  
-        var delivery = $("#deliverySelector").val();
-        if (delivery === true) {
-          alert("the delivery cost is Rwf 2000");
-        };
-        var size = $("#sizeSelector").val();
-        var sizePrice;
-        if (size === "Large") {
-          return sizePrice = 4000;
-        }
-        else if (size === "Medium") {
-          sizePrice = 3000;
-        }
-        else if (size === "Small") {
-          sizePrice = 2000;
-        }
-        var crust = $("#crustSelector").val();
-        var crustPrice;
-        if ((crust === "Crispy") || (crust === "Stuffed")) {
-          crustPrice = 500;
-        }
-        else {
-          crustPrice = 800;
-        }
-        var qte = $("#quantitiesSelector").val();
-        //  console.log(size);
-        var toppings = [];
-        $("input[type=checkbox]:checked").each(function () {
-          toppings.push($(this).val());
-        });
-        // console.log(toppings);
+      $("#pick").click(function () {
+        var finalTotal = total;
 
-        for (var topp = 0; topp < toppings.length; topp++) {
-          var addToppings = 0;
-          if (toppings[topp] === "Beef") {
-            addToppings += 1000;
-          }
-          else if (toppings[topp] === "Ham") {
-            addToppings += 1500;
-          }
-          else if ((toppings[top] === "Vegetables")) {
-            addToppings += 2000;
-          }
-          else {
-            addToppings += 500;
-          }
-        }
-        var total = (addToppings + sizePrice + crustPrice) * qte;
-        var price = total + delivery;
-        $("#price").text("the price is: " + price);
-
+        $("#price").show(finalTotal);
+        $("#motivation").append("Dear " + person + " , thank you for shopping with us!");
 
       });
-      
+      //to reset the form 
+      $("#clear").click(function () {
+        $("#order")[0].reset();
+
+      });
+    });
 
 
   });
 });
+
+
+
+
+
+
