@@ -3,7 +3,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-
 .card-title {
   font-weight: bolder;
   color: blue;
@@ -11,23 +10,23 @@ body {
   /* background-color:#ffffff;
                     opacity: 0.8; */
 }
-#home,
+#home{
+    background: transparent;
+    color:white;
+}
 #invoice {
   background-color: #ffffff;
-  opacity: 0.8;
+  opacity: 0.9;
 }
-
 form {
   background-color: #bbbbbb;
   font-size: 20px;
   border: 1px solid salmon;
   width: 100%;
 }
-
 #choices {
   margin: 20px;
 }
-
 .infos {
   color: blue;
   font-size: 20px;
